@@ -11,7 +11,7 @@ const array = [];
 
 // ger button en lyssnare
 button.addEventListener("click", function () {
-    //deklarerar text inuti funktionen så den endast existerar här.
+    //deklarerar text med användarens input som värde
     const text = input.value;
     // if sats för att ge meddelande om användare inte skriver något i input.
     if (text.length == 0) {
