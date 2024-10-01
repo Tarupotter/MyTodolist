@@ -8,32 +8,37 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     
 </head>
-<body>
-    <section>
-<h1>TO DO LISTA</h1>
 
-<p id="count"> Antal todos gjorda:</p>
+<body>
+    
+    <section class="enter">
+<h1>Tarus to-do lista</h1>
+
+
 
 <div>
 
-<label for="input1">Vad behöver du göra?</label><br>
+<label class ="askText" for="taskText">Vad behöver du göra?</label><br>
 <input type="text" id="taskText" name="textInput">
-<button type="button" id="addButton">Lägg till</button>
+<button class= "cssButton"type="button" id="addButton">Lägg till</button>
 </div>
 
 <small id ="infoText"></small>
 
 <div>
-<ul>
+<ul class="listan">
 
 </ul>
+<br>
+<br>
 
+<p id="count"> Antal todos gjorda: </p>
 
 </div>
+
+
 </section>
-
-
-    
+  
     <script src='script.js'></script>
 </body>
 </html>

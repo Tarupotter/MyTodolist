@@ -32,7 +32,7 @@ button.addEventListener("click", function () {
 
     // Skapar en sopkorg
     const deleteTask = document.createElement("span");
-    deleteTask.innerHTML = "&#128465;";
+    deleteTask.innerHTML = "&#128465;"; //sopkorgens look
     deleteTask.setAttribute("class", "deleteTask");
     taskItem.appendChild(deleteTask);
 
@@ -41,15 +41,13 @@ button.addEventListener("click", function () {
 
     itemLabel.addEventListener("click", function () {
 
-        if (taskItem.getAttribute("class") == "completed") 
-        {
+        if (taskItem.getAttribute("class") == "completed") {
             completedTask--;
             taskItem.setAttribute("class", "");
             todoObject.completed = false;
 
         }
-        else 
-        {
+        else {
             completedTask++;
             taskItem.setAttribute("class", "completed")
             todoObject.completed = true;
@@ -65,12 +63,16 @@ button.addEventListener("click", function () {
      2. Tömma arrayen med metoden splice.
     Börjar från indexplats 0 till arrayens slut.
     */
-    deleteTask.addEventListener("click", function () {
-
+    deleteTask.addEventListener("click", function() {
+        /* Så först måste du leta efter 
+        den text som man har klickat på med en findIndex() metod. 
+        Därefter kan du göra splice på rätt index.*/
         taskItem.remove();
-        array.splice(0, array.length);
-
+        
     });
+
+
+    
 
     //objekt som tar in texten och pushas in i min array.
     const todoObject = { text };
